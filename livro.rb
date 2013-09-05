@@ -8,15 +8,15 @@ class Livro
 end
 
 
-livro_rails = Livro.new(20, "Agile web dev",2012)
+livro_rails = Livro.new("Agile web dev", 30.00,2012)
 
-livro_ruby = Livro.new(50, "RUBY ON RAILS",2011)
+livro_ruby = Livro.new("RUBY ON RAILS", 50.00,2011)
 
 
 
 def imprime_nota_fiscal(livros)
 	livros.each do |livro|
-		puts "Titulo: #{livro.titulo} - #{livro.preco}"
+		puts "Titulo: #{livro.titulo} - Preço: #{livro.preco} - Ano: #{livro.ano_lancamento}"
 	end
 end
 livros = [livro_rails, livro_ruby]
