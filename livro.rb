@@ -1,22 +1,20 @@
 class Livro
-	attr_accessor :titulo, :preco, :ano_lancamento
+	attr_reader :titulo, :preco, :ano_lancamento
+	def initialize(titulo, preco, ano_lancamento)
+		@titulo = titulo
+		@preco = preco
+		@ano_lancamento = ano_lancamento
+	end
 end
 
 
-livro_rails = Livro.new
-livro_rails.preco = 20
-livro_rails.titulo = "Agile web dev"
-livro_rails.ano_lancamento = 2012
+livro_rails = Livro.new(20, "Agile web dev",2012)
 
+livro_ruby = Livro.new(50, "RUBY ON RAILS",2011)
 
-livro_ruby = Livro.new
-livro_ruby.preco = 30
-livro_ruby.titulo = "ruby"
-livro_ruby.ano_lancamento = 2010
 
 
 def imprime_nota_fiscal(livros)
-	livro = 1
 	livros.each do |livro|
 		puts "Titulo: #{livro.titulo} - #{livro.preco}"
 	end
